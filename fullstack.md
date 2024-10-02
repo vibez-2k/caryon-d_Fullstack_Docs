@@ -30,7 +30,7 @@ padding:10px;   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0,
   
 
 ## Getting Started with Sequelize
-### Step 1: Install Sequelize and CLI
+### <span style="color: orange;"> Step 1:</span> Install Sequelize and CLI
 
 - First, install Sequelize and Sequelize CLI along with the necessary database dependencies in your backend directory (e.g., PostgreSQL,MySQL,...):
 
@@ -39,7 +39,7 @@ npm install sequelize sequelize-cli
 npm install mysql2  # For MySQL
 ```
 
-### Step 2: Initialize sequlize in backend directory
+### <span style="color: orange;"> Step 2:</span> Initialize sequlize in backend directory
 
 ```bash
 npx sequelize-cli init
@@ -55,22 +55,27 @@ npx sequelize-cli init
 ├── migrations
 └── seeders
 ```
-### Step 3: generate a model and migration folder 
+### <span style="color: orange;"> Step 3:</span> generate a model and migration folder 
 
-- Follow this step if you want to use class based syntax in model unless skip to  **step 4**
+- Follow this step if you want to use class based syntax in model unless skip to  <span style="color: orange;"> **Step 4**</span>
 
 - migration folder contains all the migration files which is use to create the schema of the database (structure)
 
 - and the modal are represention od the table schema and used to intract with them
 
+<span style="font-family: monospace; color:gray;"> 
 this command takes some flags for attributes like fullName , lastName, email
+</span>
+
 ```bash
 npx sequelize-cli model:generate --name User --attributes firstName:string,        lastName:string,email:string
 ```
+<span style="font-family: monospace; color:gray;"> 
 this command will generate a sample user migration and model
+</span>
 
 
-### Step 4: follow step 4 instead of step 3 if you prefer object based syntax for models
+### <span style="color: orange;"> Step :</span> follow step 4 instead of step 3 if you prefer object based syntax for models
 
 
 - for object based syntax for models we need to custom create the models thus we need to first generate migration files alone by using
@@ -79,11 +84,11 @@ this command will generate a sample user migration and model
 npx sequelize-cli migration:generate --name migration_name
 ```
 
+<br/>
 
+Emphasized how this structured approach not only improves **collaboration** but also enhances **debugging** efficiency.
 
-- Emphasized how this structured approach not only improves **collaboration** but also enhances **debugging** efficiency.
-
-- Key takeaway: Understanding the **importance of separation of concerns** directly contributes to maintaining a **clean** and **scalable architecture**.
+Key takeaway: Understanding the **importance of separation of concerns** directly contributes to maintaining a **clean** and **scalable architecture**.
 
   <span style="color: skyblue;">This approach builds the foundation for long-term maintainability, which is critical in industry-level projects.</span>
 
@@ -176,6 +181,8 @@ npx sequelize-cli migration:generate --name migration_name
   - **Refining UI components**
   - **Managing folder structure**
 
+- This personalized feedback was incredibly helpful, allowing me to clearly see my strengths and the areas where I could improve.
+
 - Assigned smaller, focused tasks to refine these areas. This feedback-driven approach helped boost confidence in **problem-solving** and **debugging** real-world applications.
 
   <span style="color: skyblue;">Breaking down complex problems into manageable tasks is a key industry practice, ensuring that each component is thoroughly refined and optimized.</span>
@@ -231,7 +238,7 @@ npx sequelize-cli migration:generate --name migration_name
 
   <span style="color: skyblue;">By applying Git Flow principles, we gained valuable experience in maintaining a robust, well-structured codebase, essential for any industry-level project.</span>
 
-- **UI Link**: [Adobe UI](#)
+- **UI Link**: [Adobe UI](https://xd.adobe.com/view/c3a27cec-9eaf-451f-b34a-606778ed2516-96f1/screen/55cd3995-8d22-423f-8672-c70a3b23bcec/)
 
 </div>
 
