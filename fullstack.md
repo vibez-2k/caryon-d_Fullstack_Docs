@@ -75,7 +75,7 @@ this command will generate a sample user migration and model
 </span>
 
 
-### <span style="color: orange;"> Step :</span> follow step 4 instead of step 3 if you prefer object based syntax for models
+### <span style="color: orange;"> Step 4:</span> follow step 4 instead of step 3 if you prefer object based syntax for models
 
 
 - for object based syntax for models we need to custom create the models thus we need to first generate migration files alone by using
@@ -93,6 +93,54 @@ Key takeaway: Understanding the **importance of separation of concerns** directl
   <span style="color: skyblue;">This approach builds the foundation for long-term maintainability, which is critical in industry-level projects.</span>
 
 <br>
+<h3>For Undoing the Migartions: </h3>
+
+```bash
+npx sequelize-cli db:migrate:undo
+```
+This command will undo the recently upped migartion file
+
+<h4>
+For undoing all the migartions recenty changed:
+</h4>
+
+```bash
+npx sequelize-cli db:migrate:undo:all
+```
+ 
+
+# Sequelize Seeders
+
+### What are Seeders?
+
+In Sequelize, **Seeders** are used to populate the database with initial data. This is particularly useful when you need to set up default values or create sample data for testing purposes.
+
+Seeders allow you to define and insert specific data sets into your database in a systematic and organized manner.
+
+### Creating Seeders
+
+You can create a new seeder file using the Sequelize CLI with the following command:
+
+```bash
+npx sequelize-cli seed:generate --name <seeder_name>
+```
+### Running Seeders
+```bash
+npx sequelize-cli db:seed:all
+```
+This command will run all the seeders
+### Undoing Seeders
+```bash
+npx sequelize-cli db:seed:undo:all
+```
+This command will undo all the seeders
+
+## Sequelize MetaData
+The primary function of the SequelizeMeta table is to record which migration or seeder files have been executed. It helps maintain the integrity of database operations across different environments (development, testing, production) by tracking
+
+Migrations: Tracks applied schema changes to the database (e.g., creating or altering tables).
+Seeders: Tracks the initial or test data that has been inserted into the database.
+Without the SequelizeMeta table, Sequelize would not know which migrations or seeders have already been applied, potentially causing duplicate schema changes or data entries.
 
 ## **Day 2 - 20/09/2024**:
 
